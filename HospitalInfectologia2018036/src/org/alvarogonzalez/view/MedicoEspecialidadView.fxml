@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane blendMode="DIFFERENCE" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="420.0" prefWidth="611.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.alvarogonzalez.controller.MedicoEspecialidadController">
+   <children>
+      <Label layoutX="182.0" layoutY="14.0" text="Médico Especialidad">
+         <font>
+            <Font name="Baskerville Old Face" size="30.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5" focusDistance="-0.39534883720930236" radius="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Label>
+      <ComboBox fx:id="cmbCodigoMedico" disable="true" layoutX="24.0" layoutY="94.0" prefHeight="25.0" prefWidth="142.0" />
+      <ComboBox fx:id="cmbCodigoEspecialidad" disable="true" layoutX="182.0" layoutY="94.0" prefHeight="25.0" prefWidth="142.0" />
+      <ComboBox fx:id="cmbCodigoHorario" disable="true" layoutX="340.0" layoutY="94.0" prefHeight="25.0" prefWidth="172.0" />
+      <TableView fx:id="tblMedicoEspecialidad" layoutX="24.0" layoutY="134.0" onMouseClicked="#seleccionarElemento" prefHeight="217.0" prefWidth="562.0">
+        <columns>
+          <TableColumn fx:id="colCodigo" prefWidth="122.0" text="Código" />
+          <TableColumn fx:id="colCodigoMedico" prefWidth="147.0" text="Código Médico" />
+            <TableColumn fx:id="colCodigoEspecialidad" prefWidth="154.0" text="Código Especialidad" />
+            <TableColumn fx:id="colCodigoHorario" prefWidth="139.0" text="Código Horario" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Label layoutX="54.0" layoutY="70.0" text="Código Médico" />
+      <Label layoutX="200.0" layoutY="70.0" text="Código Especialidad" />
+      <Label layoutX="390.0" layoutY="70.0" text="Código Horario" />
+      <Button fx:id="btnReporte" layoutX="516.0" layoutY="367.0" mnemonicParsing="false" onAction="#generarReporte" prefHeight="30.0" prefWidth="70.0" text="Reporte" />
+      <Button fx:id="btnEliminar" layoutX="442.0" layoutY="368.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="30.0" prefWidth="70.0" text="Eliminar" />
+      <Button fx:id="btnNuevo" layoutX="365.0" layoutY="368.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="30.0" prefWidth="70.0" text="Nuevo" />
+      <ImageView blendMode="DIFFERENCE" fitHeight="46.0" fitWidth="62.0" layoutX="28.0" layoutY="359.0" onMouseClicked="#ventanaEspecialidades" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/FlechaM.png" />
+         </image>
+      </ImageView>
+      <ImageView blendMode="DIFFERENCE" fitHeight="46.0" fitWidth="61.0" layoutX="110.0" layoutY="359.0" onMouseClicked="#ventanaHorarios" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/FlechaM.png" />
+         </image>
+      </ImageView>
+      <ImageView blendMode="EXCLUSION" fitHeight="46.0" fitWidth="53.0" layoutX="525.0" layoutY="64.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/FlechaN.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="35.0" layoutY="377.0" onMouseClicked="#ventanaEspecialidades" text="Especialidades" textFill="WHITE">
+         <font>
+            <Font size="6.0" />
+         </font>
+      </Label>
+      <Label layoutX="119.0" layoutY="377.0" onMouseClicked="#ventanaHorarios" text="Horarios" textFill="WHITE">
+         <font>
+            <Font size="9.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

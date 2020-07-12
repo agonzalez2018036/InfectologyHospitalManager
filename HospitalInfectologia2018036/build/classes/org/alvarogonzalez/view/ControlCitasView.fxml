@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane blendMode="DIFFERENCE" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.alvarogonzalez.controller.ControlCitasController">
+   <children>
+      <Pane onMouseClicked="#limpiarControles" prefHeight="457.0" prefWidth="707.0" />
+      <Label layoutX="293.0" layoutY="14.0" text="Control Citas">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="42.0" layoutY="78.0" text="Hora de inicio" />
+      <Label layoutX="328.0" layoutY="79.0" text="Hora de salida" />
+      <TextField fx:id="txtInicio" editable="false" layoutX="128.0" layoutY="75.0" />
+      <TextField fx:id="txtSalida" editable="false" layoutX="412.0" layoutY="75.0" />
+      <GridPane fx:id="grpFecha" layoutX="91.0" layoutY="146.0" prefHeight="30.0" prefWidth="149.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+      </GridPane>
+      <Label layoutX="42.0" layoutY="153.0" text="Fecha" />
+      <ComboBox fx:id="cmbMedico" disable="true" layoutX="265.0" layoutY="148.0" prefHeight="25.0" prefWidth="170.0" />
+      <Label layoutX="300.0" layoutY="122.0" text="Código médico" />
+      <Label layoutX="541.0" layoutY="131.0" text="Código paciente" />
+      <ComboBox fx:id="cmbPaciente" disable="true" layoutX="499.0" layoutY="148.0" prefWidth="170.0" />
+      <TableView fx:id="tblCitas" layoutX="24.0" layoutY="200.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="179.0" prefWidth="653.0">
+        <columns>
+          <TableColumn fx:id="colCodigo" prefWidth="75.0" text="Código" />
+          <TableColumn fx:id="colFecha" prefWidth="140.0" text="Fecha" />
+            <TableColumn fx:id="colInicio" prefWidth="119.0" text="Inicio" />
+            <TableColumn fx:id="colFin" prefWidth="113.0" text="Finalización" />
+            <TableColumn fx:id="colMedico" prefWidth="104.0" text="Código médico" />
+            <TableColumn fx:id="colPaciente" prefWidth="101.0" text="Código paciente" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnReporte" layoutX="607.0" layoutY="393.0" mnemonicParsing="false" onAction="#reporte" prefHeight="30.0" prefWidth="70.0" text="Reporte" />
+      <Button fx:id="btnEditar" layoutX="527.0" layoutY="393.0" mnemonicParsing="false" onAction="#editar" prefHeight="30.0" prefWidth="70.0" text="Editar" />
+      <Button fx:id="btnEliminar" layoutX="447.0" layoutY="393.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="30.0" prefWidth="70.0" text="Eliminar" />
+      <Button fx:id="btnNuevo" layoutX="368.0" layoutY="393.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="30.0" prefWidth="70.0" text="Nuevo" />
+      <ImageView blendMode="DIFFERENCE" fitHeight="54.0" fitWidth="63.0" layoutX="597.0" layoutY="61.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/FlechaN.png" />
+         </image>
+      </ImageView>
+      <ImageView blendMode="DIFFERENCE" fitHeight="54.0" fitWidth="62.0" layoutX="24.0" layoutY="385.0" onMouseClicked="#ventanaRecetas" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/FlechaM.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

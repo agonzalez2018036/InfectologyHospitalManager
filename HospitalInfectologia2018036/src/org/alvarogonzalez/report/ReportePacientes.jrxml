@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReportePacientes" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5cc52c8c-d8e9-41d6-a54d-4cfdddd10706">
+	<property name="ireport.zoom" value="0.9090909090909091"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[call sp_InformacionPacientes]]>
+	</queryString>
+	<field name="codigoPaciente" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombres" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Apellidos" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="edad" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="direccion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="numeroContacto" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="802">
+			<image>
+				<reportElement x="-19" y="649" width="769" height="153" uuid="ae50eb10-c179-450d-832a-381335ddff99"/>
+				<imageExpression><![CDATA["C:\\Users\\Usuario\\Documents\\NetBeansProjects\\HospitalInfectologia2018036\\src\\org\\alvarogonzalez\\images\\piePagina.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="-31" y="-48" width="803" height="187" uuid="6d53bb54-3024-4906-b474-891416a9ce80"/>
+				<imageExpression><![CDATA["C:\\Users\\Usuario\\Documents\\NetBeansProjects\\HospitalInfectologia2018036\\src\\org\\alvarogonzalez\\images\\membrete.png"]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<image>
+				<reportElement x="41" y="11" width="73" height="51" uuid="85d6d33e-6565-4b5d-9786-21ae7c46b447"/>
+				<imageExpression><![CDATA["C:\\Users\\Usuario\\Documents\\NetBeansProjects\\HospitalInfectologia2018036\\src\\org\\alvarogonzalez\\images\\icono.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="152" y="22" width="375" height="40" uuid="030927f9-2217-4ab5-83eb-0a7d93e4807e"/>
+				<imageExpression><![CDATA["C:\\Users\\Usuario\\Documents\\NetBeansProjects\\HospitalInfectologia2018036\\src\\org\\alvarogonzalez\\images\\Eslogan.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="11" y="41" width="100" height="20" uuid="0bb76657-3872-4105-9288-86003ac5fba4"/>
+				<text><![CDATA[Código Paciente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="98" y="41" width="100" height="20" uuid="8b6f3abc-96d5-4f6a-bc28-07d6565193e1"/>
+				<text><![CDATA[Nombres]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="176" y="41" width="100" height="20" uuid="aa53b9d8-badd-40ac-977b-c2c87fa2f97b"/>
+				<text><![CDATA[Apellidos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="246" y="41" width="100" height="20" uuid="74a64fe0-d21b-49c1-bcbd-63f7089e6ab1"/>
+				<text><![CDATA[Edad]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="302" y="41" width="100" height="20" uuid="220bde1b-0ddf-4bc5-aacf-773d942d9d6d"/>
+				<text><![CDATA[Dirección]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="455" y="41" width="100" height="20" uuid="6a53011b-0019-44bf-862a-00bc074817a5"/>
+				<text><![CDATA[Número telefónico]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="11" y="7" width="100" height="20" uuid="178e4f73-92ec-4bc8-ab10-0545515eecc6"/>
+				<textFieldExpression><![CDATA[$F{codigoPaciente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="98" y="7" width="100" height="20" uuid="520898d2-b46f-4ab0-9287-f0fe9c3c629e"/>
+				<textFieldExpression><![CDATA[$F{nombres}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="176" y="7" width="100" height="20" uuid="aaff3830-dcb3-4928-82fe-c7aedf04141a"/>
+				<textFieldExpression><![CDATA[$F{Apellidos}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="246" y="7" width="100" height="20" uuid="9de95e20-a1f8-4648-9bcc-dd3df3209139"/>
+				<textFieldExpression><![CDATA[$F{edad}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="302" y="7" width="100" height="20" uuid="f0b25846-db82-4e6e-891c-b1f44aef0056"/>
+				<textFieldExpression><![CDATA[$F{direccion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="455" y="7" width="100" height="20" uuid="e4159b01-ec63-444b-ac33-9e1318bfef0c"/>
+				<textFieldExpression><![CDATA[$F{numeroContacto}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+</jasperReport>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteMedicos" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="23f5a498-dc30-47dd-abb0-2795d9c0fa40">
+	<property name="ireport.zoom" value="1.0000000000000029"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="416"/>
+	<queryString>
+		<![CDATA[call sp_InformacionMedicos]]>
+	</queryString>
+	<field name="codigoMedico" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombres" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="apellidos" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="horaEntrada" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="horaSalida" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="TurnoMaximo" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefonoPersonal" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="802">
+			<image>
+				<reportElement x="-24" y="649" width="769" height="153" uuid="4739fd9a-5443-4eca-bc2b-5e0df4ca3e3c"/>
+				<imageExpression><![CDATA["C:\\Users\\Usuario\\Documents\\NetBeansProjects\\HospitalInfectologia2018036\\src\\org\\alvarogonzalez\\images\\piePagina.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="-24" y="-54" width="796" height="205" uuid="5988deaa-b6c8-42c8-82b4-6b46813ff59b"/>
+				<imageExpression><![CDATA["C:\\Users\\Usuario\\Documents\\NetBeansProjects\\HospitalInfectologia2018036\\src\\org\\alvarogonzalez\\images\\membrete.png"]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="78" splitType="Stretch">
+			<image>
+				<reportElement x="54" y="12" width="73" height="51" uuid="206de59a-69b8-41b5-8f92-1bb9b12cbf81"/>
+				<imageExpression><![CDATA["C:\\Users\\Usuario\\Documents\\NetBeansProjects\\HospitalInfectologia2018036\\src\\org\\alvarogonzalez\\images\\icono.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="165" y="23" width="375" height="40" uuid="44959a09-7908-45d7-851c-1dc89a5e2413"/>
+				<imageExpression><![CDATA["C:\\Users\\Usuario\\Documents\\NetBeansProjects\\HospitalInfectologia2018036\\src\\org\\alvarogonzalez\\images\\Eslogan.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="38" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="20" width="100" height="20" uuid="5e9a0a8a-59ac-4093-85b3-60339328f03d"/>
+				<text><![CDATA[código médico]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="83" y="20" width="100" height="20" uuid="5207edb9-fae9-4415-a04d-6bc95fa644c6"/>
+				<text><![CDATA[nombres]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="183" y="20" width="100" height="20" uuid="ccfd28f6-3c60-4379-b46f-364d5442c53d"/>
+				<text><![CDATA[apellidos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="260" y="20" width="100" height="20" uuid="5d729e4e-a87d-41b0-8319-5ff7b52f607c"/>
+				<text><![CDATA[hora entrada]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="341" y="20" width="100" height="20" uuid="2ec6837c-1f75-43a1-82c4-955b567117f5"/>
+				<text><![CDATA[hora salida]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="406" y="20" width="100" height="20" uuid="76e70f54-5a60-4f85-b011-c0d9dcec936b"/>
+				<text><![CDATA[turno máximo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="477" y="20" width="100" height="20" uuid="01407948-ac5d-42fd-ad09-343e43263341"/>
+				<text><![CDATA[teléfono personal]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="119" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="28" width="100" height="20" uuid="9b0194c6-5e24-438a-85d1-1681b1e19fdc"/>
+				<textFieldExpression><![CDATA[$F{codigoMedico}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="83" y="28" width="100" height="20" uuid="06de9b0e-80f8-497f-8864-b8299daf0152"/>
+				<textFieldExpression><![CDATA[$F{nombres}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="183" y="28" width="100" height="20" uuid="6e72b7a9-6a38-4061-b206-687c92008dec"/>
+				<textFieldExpression><![CDATA[$F{apellidos}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="260" y="28" width="100" height="20" uuid="69e26b66-5d1a-4d48-b9fe-ffb4aa173e05"/>
+				<textFieldExpression><![CDATA[$F{horaEntrada}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="341" y="28" width="100" height="20" uuid="23f7c28a-993d-4185-960c-0b886544b8ce"/>
+				<textFieldExpression><![CDATA[$F{horaSalida}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="406" y="28" width="100" height="20" uuid="40afa2cd-e293-42b8-b644-156c88e2eb64"/>
+				<textFieldExpression><![CDATA[$F{TurnoMaximo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="477" y="28" width="100" height="20" uuid="49eb853a-b52f-4629-88c9-e4674d519bc1"/>
+				<textFieldExpression><![CDATA[$F{telefonoPersonal}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="50" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteTurno" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="91636d9d-69d6-4085-97ac-686db29f0547">
+	<property name="ireport.zoom" value="0.5644739300537776"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[call  sp_InformacionTurno]]>
+	</queryString>
+	<field name="codigoTurno" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fechaCita" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="valorCita" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombres" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="apellidos" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreEspecialidad" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="802" splitType="Stretch">
+			<image>
+				<reportElement x="-35" y="-53" width="803" height="187" uuid="7371c9d6-025a-4e28-a068-0c4163b6c765"/>
+				<imageExpression><![CDATA["C:\\Users\\Usuario\\Documents\\NetBeansProjects\\HospitalInfectologia2018036\\src\\org\\alvarogonzalez\\images\\membrete.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="-27" y="649" width="769" height="153" uuid="a4c88a4d-3692-48c4-90db-0c78c39aacc8"/>
+				<imageExpression><![CDATA["C:\\Users\\Usuario\\Documents\\NetBeansProjects\\HospitalInfectologia2018036\\src\\org\\alvarogonzalez\\images\\piePagina.png"]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<image>
+				<reportElement x="27" y="17" width="73" height="51" uuid="07f30518-70e5-4cdd-a9d0-f622351dcbda"/>
+				<imageExpression><![CDATA["C:\\Users\\Usuario\\Documents\\NetBeansProjects\\HospitalInfectologia2018036\\src\\org\\alvarogonzalez\\images\\icono.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="138" y="28" width="375" height="40" uuid="14839013-9397-45bd-bee1-03df85450cf6"/>
+				<imageExpression><![CDATA["C:\\Users\\Usuario\\Documents\\NetBeansProjects\\HospitalInfectologia2018036\\src\\org\\alvarogonzalez\\images\\Eslogan.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="41" width="100" height="20" uuid="76815b53-a197-42c9-b8d0-8dca6d1e6a2e"/>
+				<text><![CDATA[Código Turno]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="41" width="100" height="20" uuid="502645ec-a15c-47ce-947f-88dad21439cf"/>
+				<text><![CDATA[Fecha de cita]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="41" width="100" height="20" uuid="65e95fa5-a738-4749-b155-a72fc09d6a24"/>
+				<text><![CDATA[Costo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="279" y="41" width="100" height="20" uuid="2b607554-9fe6-41ce-a4e4-26e160397e0b"/>
+				<text><![CDATA[Nombres]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="359" y="41" width="100" height="20" uuid="68a691ca-c1d5-4a32-ac23-dd52da02cb71"/>
+				<text><![CDATA[apellidos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="428" y="41" width="100" height="20" uuid="e9eb8c85-5d26-4299-9fcd-80a2bf31a5c7"/>
+				<text><![CDATA[Especialidad]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="14" width="100" height="20" uuid="5e11b4f7-803c-47db-b01e-a27d470283f8"/>
+				<textFieldExpression><![CDATA[$F{codigoTurno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="14" width="100" height="20" uuid="d07843cc-7e08-49a6-86f6-66949e6e1070"/>
+				<textFieldExpression><![CDATA[$F{fechaCita}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="14" width="100" height="20" uuid="7b4b0846-3634-4ce4-a691-b4392ddd0c5d"/>
+				<textFieldExpression><![CDATA[$F{valorCita}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="279" y="14" width="100" height="20" uuid="fc66f5bd-0abc-4dbf-97dc-bb19a3195532"/>
+				<textFieldExpression><![CDATA[$F{nombres}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="359" y="14" width="100" height="20" uuid="0618b848-b39b-44e4-8775-9f7b9de93375"/>
+				<textFieldExpression><![CDATA[$F{apellidos}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="428" y="14" width="100" height="20" uuid="d8119ec2-2c3f-4de7-bfd7-d547db688d5e"/>
+				<textFieldExpression><![CDATA[$F{nombreEspecialidad}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+</jasperReport>

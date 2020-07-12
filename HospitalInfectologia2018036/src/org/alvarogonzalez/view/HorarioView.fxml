@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane blendMode="DIFFERENCE" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="470.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.alvarogonzalez.controller.HorarioController">
+   <children>
+      <SplitPane layoutX="-6.0" layoutY="-4.0" onMouseClicked="#limpiarControles" opacity="0.0" prefHeight="479.0" prefWidth="612.0" />
+      <Label layoutX="253.0" layoutY="14.0" text="Horario">
+         <font>
+            <Font name="Baskerville Old Face" size="29.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5" focusDistance="-0.39534883720930236" radius="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Label>
+      <TextField fx:id="txtEntrada" editable="false" layoutX="112.0" layoutY="74.0" />
+      <TextField fx:id="txtSalida" editable="false" layoutX="363.0" layoutY="74.0" />
+      <Label fx:id="lbEntrada" layoutX="21.0" layoutY="78.0" text="Hora de entrada" />
+      <Label fx:id="lbSalida" layoutX="282.0" layoutY="78.0" text="Hora de salida" />
+      <CheckBox fx:id="chkViernes" disable="true" layoutX="397.0" layoutY="164.0" mnemonicParsing="false" text="Viernes" />
+      <CheckBox fx:id="chkLunes" disable="true" layoutX="38.0" layoutY="164.0" mnemonicParsing="false" text="Lunes" />
+      <CheckBox fx:id="chkMartes" disable="true" layoutX="125.0" layoutY="164.0" mnemonicParsing="false" text="Martes" />
+      <CheckBox fx:id="chkMiercoles" disable="true" layoutX="217.0" layoutY="164.0" mnemonicParsing="false" text="Miercoles" />
+      <CheckBox fx:id="chkJueves" disable="true" layoutX="311.0" layoutY="164.0" mnemonicParsing="false" text="Jueves" />
+      <Label layoutX="261.0" layoutY="122.0" text="Asistencia">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblHorarios" layoutX="18.0" layoutY="200.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="205.0" prefWidth="565.0">
+        <columns>
+          <TableColumn fx:id="colCodigo" prefWidth="52.0" text="código" />
+          <TableColumn fx:id="colEntrada" prefWidth="98.0" text="hora de entrada" />
+            <TableColumn fx:id="colSalida" prefWidth="90.0" text="hora de salida" />
+            <TableColumn fx:id="colLunes" prefWidth="48.0" text="lunes" />
+            <TableColumn fx:id="colMartes" prefWidth="50.0" text="martes" />
+            <TableColumn fx:id="colMiercoles" prefWidth="86.0" text="miercoles" />
+            <TableColumn fx:id="colJueves" prefWidth="63.0" text="jueves" />
+            <TableColumn fx:id="colViernes" prefWidth="77.0" text="viernes" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnCancelar" layoutX="514.0" layoutY="419.0" mnemonicParsing="false" onAction="#cancelar" prefHeight="30.0" prefWidth="70.0" text="Cancelar" />
+      <Button fx:id="btnEditar" layoutX="438.0" layoutY="419.0" mnemonicParsing="false" onAction="#editar" prefHeight="30.0" prefWidth="70.0" text="Editar" />
+      <Button fx:id="btnEliminar" layoutX="359.0" layoutY="419.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="30.0" prefWidth="70.0" text="Eliminar" />
+      <Button fx:id="btnNuevo" layoutX="282.0" layoutY="419.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="30.0" prefWidth="70.0" text="Nuevo" />
+      <ImageView blendMode="DIFFERENCE" fitHeight="60.0" fitWidth="70.0" layoutX="508.0" layoutY="119.0" onMouseClicked="#ventanaMedicoEspecialidad" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/FlechaN.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

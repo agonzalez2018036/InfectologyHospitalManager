@@ -1,0 +1,14 @@
+.menu-bar {
+    -fx-background-color: derive(#000000,15%);
+}
+
+.context-menu {
+    -fx-background-color: derive(#000000,15%);
+}
+
+.menu-bar .label {
+    -fx-font-size: 10pt;
+    -fx-font-family: "System";
+    -fx-text-fill: white;
+    -fx-opacity: 1;
+}

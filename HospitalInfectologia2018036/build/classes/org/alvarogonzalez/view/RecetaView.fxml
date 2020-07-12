@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane blendMode="DIFFERENCE" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.alvarogonzalez.controller.RecetaController">
+   <children>
+      <Pane onMouseClicked="#limpiarControles" prefHeight="430.0" prefWidth="600.0" />
+      <Label layoutX="275.0" layoutY="14.0" text="Recetas">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="txtDescripcion" editable="false" layoutX="39.0" layoutY="82.0" prefHeight="70.0" prefWidth="454.0" />
+      <Label layoutX="39.0" layoutY="59.0" text="Descripcion:" />
+      <Label layoutX="39.0" layoutY="166.0" text="Código control cita" />
+      <ComboBox fx:id="cmbCodigoCC" disable="true" layoutX="157.0" layoutY="162.0" prefHeight="25.0" prefWidth="178.0" />
+      <TableView fx:id="tblRecetas" layoutX="41.0" layoutY="208.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="154.0" prefWidth="535.0">
+        <columns>
+          <TableColumn fx:id="colCodigo" prefWidth="75.0" text="Código" />
+          <TableColumn fx:id="colDescripcion" prefWidth="337.0" text="Descripción" />
+            <TableColumn fx:id="colCC" prefWidth="122.0" text="Código control-cita" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnNuevo" layoutX="346.0" layoutY="379.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="30.0" prefWidth="70.0" text="Nuevo" />
+      <Button fx:id="btnEliminar" layoutX="425.0" layoutY="379.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="30.0" prefWidth="70.0" text="Eliminar" />
+      <Button fx:id="btnEditar" layoutX="505.0" layoutY="379.0" mnemonicParsing="false" onAction="#editar" prefHeight="30.0" prefWidth="70.0" text="Editar" />
+      <ImageView blendMode="DIFFERENCE" fitHeight="51.0" fitWidth="65.0" layoutX="517.0" layoutY="92.0" onMouseClicked="#ventanaControlCitas" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/FlechaN.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

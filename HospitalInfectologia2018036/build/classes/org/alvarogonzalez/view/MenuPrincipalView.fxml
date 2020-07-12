@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="416.0" prefWidth="614.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.alvarogonzalez.controller.MenuPrincipalController">
+   <children>
+      <ImageView fitHeight="423.0" fitWidth="619.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/fondo.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="521.0" layoutY="374.0" prefHeight="28.0" prefWidth="83.0" text="Version 1.12.1" textFill="#fcfcfc" />
+      <MenuBar fx:id="mnBarra" prefHeight="28.0" prefWidth="619.0" stylesheets="@../resource/MenuBar.css">
+        <menus>
+          <Menu mnemonicParsing="false" text="Módulos">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaMedicoEspecialidad" text="Médico Especialidad" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaResponsableTurno" text="Encargado de Turno" />
+              <MenuItem mnemonicParsing="false" onAction="#ventanaPacientes" text="Pacientes" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaMedicos" text="Médicos" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaTurno" text="Turno" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaControlCitas" text="Control de Citas" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Reportes">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Reporte Citas" />
+               </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Acerca de">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaProgramador" text="Programador" />
+               </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <ImageView fitHeight="77.0" fitWidth="83.0" layoutX="521.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/cruz.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
